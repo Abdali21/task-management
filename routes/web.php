@@ -15,11 +15,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//home
+//home------------------------------------------------------------------------------------------------------------------------------------------
 Route::get("/", [HomeController::class, "index"])->name("home");
 
 
-//auth
+//auth---------------------------------------------------------------------------------------------------------------------------------------------
+//register
+Route::get("/profiles/create", [ProfileController::class, "create"])->name("profiles.create");
+Route::post("/profiles/store", [ProfileController::class, "store"])->name("profiles.store");
+
+//login
 Route::get("/login", [ProfileController::class, "show"])->name("login.show");
 Route::post("/login", [ProfileController::class, "login"])->name("login.login");
 Route::get("/logout", [ProfileController::class, "logout"])->name("login.logout");
