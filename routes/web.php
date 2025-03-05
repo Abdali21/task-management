@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,4 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//home
 Route::get("/", [HomeController::class, "index"])->name("home");
+
+
+//auth
+Route::get("/login", [ProfileController::class, "show"])->name("login.show");
+Route::post("/login", [ProfileController::class, "login"])->name("login.login");
+Route::get("/logout", [ProfileController::class, "logout"])->name("login.logout");
