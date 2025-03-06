@@ -15,7 +15,7 @@ class TaskController extends Controller
     public function index()
     {
        $tasks = Task::all();
-       dd($tasks);
+       return view("task.tasks", compact("tasks"));
     }
 
     /**
@@ -36,7 +36,6 @@ class TaskController extends Controller
 
        Task::create($formField);
        return to_route("tasks.index")->with("success", "task added successfuly");
-;
     }
 
     /**
@@ -44,7 +43,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        //
+        return view("task.edit");
     }
 
     /**

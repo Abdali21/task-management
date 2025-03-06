@@ -1,12 +1,13 @@
-<nav class="flex items-center justify-around bg-gray-500 py-2 text-white">
+<nav class="flex items-center justify-around bg-blue-500 py-2 text-white">
     <div>
-        <a href="#">
-            Todo
+        <a href="{{route("home")}}">
+            Task Management
         </a>
     </div>
-    <div class="flex items-center space-x-8">
-        <a href="#">add Task</a>
-        <a href="#">
+    <div class="flex items-center space-x-16">
+        <a href="{{route("tasks.create")}}">Add Task</a>
+        <a href="{{route("tasks.index")}}">All Tasks</a>
+        <a href="{{route("login.show")}}">
             Login
         </a>
     </div>
