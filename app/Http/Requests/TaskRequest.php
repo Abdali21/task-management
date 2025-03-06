@@ -23,7 +23,8 @@ class TaskRequest extends FormRequest
     {
         return [
             "title" => "required",
-            "status" => "required | in:Not Started,In Progress, Completed"
+            "status" => "required | in:Not Started,In Progress,Completed",
+            "due_date"=>"required"
         ];
     }
 }
