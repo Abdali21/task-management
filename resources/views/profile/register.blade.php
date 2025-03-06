@@ -1,4 +1,4 @@
-<x-master title="login">
+<x-master title="register">
     <form method="POST" action="{{route("profiles.store")}}">
         @csrf
         <label>Name</label>

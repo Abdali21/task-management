@@ -8,6 +8,7 @@
 </head>
 <body>
     @include('partials.navbar')
+    <x-alert/>
     <main class="px-4 m-4 h-[81vh]">
         {{$slot}}
     </main>
