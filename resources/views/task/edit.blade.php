@@ -1,5 +1,5 @@
 <x-master title="Add Task">
-    <form method="POST" action="{{route("tasks.store")}}">
+    <form method="POST" action="{{route("tasks.update")}}">
      @csrf
      <div>
          <input type="text" placeholder="enter your task" name="title">  

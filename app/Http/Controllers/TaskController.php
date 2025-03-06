@@ -43,7 +43,7 @@ class TaskController extends Controller
      */
     public function show(Task $task)
     {
-        return view("task.edit");
+       
     }
 
     /**
@@ -51,7 +51,7 @@ class TaskController extends Controller
      */
     public function edit(Task $task)
     {
-        //
+        return view("task.edit", compact("task"));
     }
 
     /**
@@ -59,7 +59,7 @@ class TaskController extends Controller
      */
     public function update(Request $request, Task $task)
     {
-        //
+        dd($task);
     }
 
     /**

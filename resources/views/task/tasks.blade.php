@@ -33,13 +33,13 @@
                     </td>
                     <td class="flex items-center justify-center space-x-4 border border-gray-300 p-2">
                         <a href="{{route("tasks.destroy", $task->id)}}">
-                            <span class="px-6 py-1 bg-yellow-400 rounded-md">
+                            <span class="px-6 py-1 bg-blue-500 text-white rounded-md">
                                Edit
                             </span>
                         </a>
                         <form method="post" action="{{route("tasks.destroy", $task->id)}}">
                             @csrf
-                            <button class="px-6 py-1 bg-red-500 rounded-md cursor-pointer">
+                            <button class="px-6 py-1 bg-red-500 text-white rounded-md cursor-pointer">
                                 Delete
                             </button>
                         </form>
