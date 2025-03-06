@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TaskRequest;
 use App\Models\Task;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class TaskController extends Controller
 {
@@ -12,7 +14,8 @@ class TaskController extends Controller
      */
     public function index()
     {
-        //
+       $tasks = Task::all();
+       dd($tasks);
     }
 
     /**
@@ -20,15 +23,20 @@ class TaskController extends Controller
      */
     public function create()
     {
-        //
+        return view("task.create");
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(TaskRequest $request)
+    {  
+      $formField = $request->validated();
+      $formField["profile_id"] = Auth::id();
+
+       Task::create($formField);
+       return to_route("tasks.index")->with("success", "task added successfuly");
+;
     }
 
     /**
