@@ -18,6 +18,7 @@
             </tr>
         </thead>
         <tbody>
+            @foreach ($tasks as $task)
             <tr>
                     <td class="border border-gray-300 p-2">
                             - {{$task->title}}

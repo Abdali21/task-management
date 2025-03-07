@@ -59,5 +59,9 @@ class ProfileController extends Controller
     }
 
     // logout
-    public function logout() {}
+    public function logout() {
+        Session()->flush();
+        Auth::logout();
+        return to_route("home")->with("success","logout successfuly");
+    }
 }
