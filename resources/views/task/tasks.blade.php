@@ -18,7 +18,6 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($tasks as $task)
             <tr>
                     <td class="border border-gray-300 p-2">
                             - {{$task->title}}
@@ -38,6 +37,7 @@
                             </span>
                         </a>
                         <form method="post" action="{{route("tasks.destroy", $task->id)}}">
+                            @method("delete")
                             @csrf
                             <button class="px-6 py-1 bg-red-500 text-white rounded-md cursor-pointer">
                                 Delete
