@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get("/", [HomeController::class, "index"])->name("home");
 
 //task---------------------------------------------------------------------------------------------------------------------------------------
-Route::resource("/tasks", TaskController::class);
+Route::resource("/tasks", TaskController::class)->middleware("auth");
 
 
 //auth---------------------------------------------------------------------------------------------------------------------------------------------

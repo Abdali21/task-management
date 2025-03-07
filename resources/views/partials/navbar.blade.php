@@ -15,7 +15,7 @@
                 <div id="popup" class="flex flex-col space-y-2 absolute top-8 bg-gray-400 p-2 hidden">
                     <p>{{auth()->user()->name}}</p>
                     <p>{{auth()->user()->email}}</p>
-                    <a class="px-4 py-1 bg-gray-500 w-full" href="{{route("login.logout")}}">
+                    <a class="px-4 py-1 bg-gray-500 hover:bg-gray-600 w-full" href="{{route("login.logout")}}">
                         Logout
                     </a>
                 </div>
