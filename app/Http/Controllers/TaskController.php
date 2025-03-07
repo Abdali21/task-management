@@ -57,9 +57,13 @@ class TaskController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Task $task)
-    {
-        dd($task);
+    public function update(TaskRequest $request, Task $task)
+    {   
+        //validation
+        $formField = $request->validated();
+        $task->fill($formField)->save();
+        
+        return to_route("tasks.index")->with("success", "task updated successfully");
     }
 
     /**

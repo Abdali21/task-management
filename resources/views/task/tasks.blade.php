@@ -32,7 +32,7 @@
                         {{$task->due_date ?? "No Date"}}
                     </td>
                     <td class="flex items-center justify-center space-x-4 border border-gray-300 p-2">
-                        <a href="{{route("tasks.destroy", $task->id)}}">
+                        <a href="{{route("tasks.edit", $task->id)}}">
                             <span class="px-6 py-1 bg-blue-500 text-white rounded-md">
                                Edit
                             </span>

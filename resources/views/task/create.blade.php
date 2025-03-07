@@ -16,7 +16,6 @@
             <div class="flex flex-col space-y-2 mb-4">
                 <label>Status : </label>
                 <select name="status" class="p-2 border border-gray-300">
-                    <option value="#">Choose your status task</option>
                     <option value="Not Started">Not Started</option>
                     <option value="In Progress">In Progress</option>
                     <option value="Completed"> Completed</option>
