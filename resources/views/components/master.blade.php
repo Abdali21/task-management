@@ -13,5 +13,6 @@
         {{$slot}}
     </main>
     @include('partials.footer')
+    <script src="js/popup.js"></script>
 </body>
 </html>
