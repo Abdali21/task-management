@@ -12,4 +12,8 @@ class Task extends Model
     protected $fillable = [
         "title", "status", "due_date", "profile_id"
     ];
+
+    public function profile(){
+        return $this->belongsTo(Profile::class);
+    }
 }
