@@ -37,8 +37,15 @@
         </div>
 
         <div class="mt-2 flex items-center space-x-2">
-            <button class="w-full rounded-md bg-blue-500 p-2 text-white hover:bg-blue-600">Edit</button>
-            <button class="w-full rounded-md bg-red-500 p-2 text-white hover:bg-red-600">Delete</button>
+            <a class="w-full text-center rounded-md bg-blue-500 p-2 text-white hover:bg-blue-600"
+                href="{{route("tasks.edit", $task->id)}}">
+                Edit
+            </a>
+            <form method="POST" class="w-full text-center rounded-md bg-red-500 p-2 text-white hover:bg-red-600" action="{{route("tasks.destroy", $task->id)}}">
+                @csrf
+                @method("delete")
+                <button  onclick="return confirm('Are you sure do you want to remove this task ?')">Delete</button>
+            </form>
         </div>
     </div>
 </div>

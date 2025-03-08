@@ -5,7 +5,7 @@
             <h2 class="text-2xl font-semibold mb-4">Create Task :</h2>
             <div class="flex flex-col space-y-2 mb-4">
                 <label>Task :</label>
-                <input type="text" placeholder="Create your task" name="title" class="p-2 border border-gray-300">
+                <input type="text" placeholder="Create your task" name="title" class="p-2 bg-gray-50">
                 @error('title')
                     <span class="text-red-500 mt-1">
                         {{$message}}
@@ -15,7 +15,7 @@
 
             <div class="flex flex-col space-y-2 mb-4">
                 <label>Status : </label>
-                <select name="status" class="p-2 border border-gray-300">
+                <select name="status" class="p-2 bg-gray-50">
                     <option value="Not Started">Not Started</option>
                     <option value="In Progress">In Progress</option>
                     <option value="Completed"> Completed</option>
@@ -29,7 +29,7 @@
 
             <div class="flex flex-col space-y-2 mb-4">
                 <label>Due Date :</label>
-                <input type="date" name="due_date" class="p-2 border border-gray-300">
+                <input type="date" name="due_date" class="p-2 bg-gray-50">
                 @error('due_date')
                     <span class="text-red-500 mt-1">
                         {{$message}}
@@ -37,7 +37,7 @@
                 @enderror
             </div>
 
-            <button type="submit" class="w-full text-white py-2 px-4 bg-blue-500 hover:bg-blue-600">
+            <button type="submit" class="w-full text-white py-2 rounded-md bg-blue-500 hover:bg-blue-600">
                 Create
             </button>
         </form>
