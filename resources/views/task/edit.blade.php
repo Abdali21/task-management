@@ -7,7 +7,7 @@
 
             <div class="mb-4 flex flex-col space-y-2">
                 <label>Task :</label>
-                <input type="text" class="p-2 w-full bg-gray-50" placeholder="enter your task" name="title"
+                <input type="text" class="p-2 w-full bg-gray-50 shadow" placeholder="enter your task" name="title"
                     value="{{old("title", $task->title)}}">
                 @error('title')
                     <span class="text-red-500 mt-1">
@@ -18,7 +18,7 @@
 
             <div class="mb-4 flex flex-col space-y-2">
                 <label>Status : </label>
-                <select name="status"class="p-2 w-full bg-gray-50">
+                <select name="status"class="p-2 w-full bg-gray-50 shadow">
                     <option value="Not Started">Not Started</option>
                     <option value="In Progress">In Progress</option>
                     <option value="Completed">Completed</option>
@@ -33,7 +33,7 @@
             <div class="mb-4 flex flex-col space-y-2">
                 <label>Due Date :</label>
                 <input type="date" name="due_date" value="{{old("due_date", $task->due_date)}}"
-                class="p-2 w-full bg-gray-50">
+                class="p-2 w-full bg-gray-50 shadow">
                 @error('due_date')
                     <span class="text-red-500 mt-1">
                         {{$message}}

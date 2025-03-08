@@ -1,4 +1,4 @@
-<div class="m-4 rounded-lg bg-gray-100 p-6 transition delay-150 duration-300 ease-in-out hover:-translate-y-2">
+<div class="m-4 rounded-lg bg-gray-100 p-6 transition delay-150 duration-300 ease-in-out hover:-translate-y-2 shadow">
     <div class="flex flex-col space-y-2">
         <div class="mb-4 flex items-center justify-between">
             <span class="py-1 px-3 text-sm font-medium rounded-md text-gray-600
