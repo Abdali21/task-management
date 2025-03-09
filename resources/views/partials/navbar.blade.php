@@ -1,4 +1,4 @@
-<nav class="flex items-center justify-between bg-blue-600 px-6 py-3 text-white shadow-lg">
+<nav class="flex items-center justify-between bg-blue-600 px-8 py-3 text-white shadow-lg">
     <!-- Logo / Brand -->
     <div class="flex items-center space-x-2">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -16,8 +16,7 @@
 
         @auth
         <!-- Profile Dropdown -->
-        <div class="relative group">
-            <span class="cursor-pointer flex items-center space-x-2" id="profile">
+            <span class="cursor-pointer flex items-center space-x-2 relative" id="profile">
                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
                     xmlns="http://www.w3.org/2000/svg">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -27,7 +26,7 @@
                 <span>My Profile</span>
             </span>
             <div id="popup"
-                class="absolute right-0 mt-2 w-48 bg-gray-700 text-white rounded-md shadow-lg p-3 hidden group-hover:flex flex-col space-y-2">
+                class="absolute right-0 top-12 w-42 bg-gray-700 text-white rounded-md shadow-lg p-3 hidden space-y-2">
                 <p class="font-semibold">{{ auth()->user()->name }}</p>
                 <p class="text-sm text-gray-300">{{ auth()->user()->email }}</p>
                 <a href="{{route('login.logout')}}"
@@ -35,7 +34,6 @@
                     Logout
                 </a>
             </div>
-        </div>
         @endauth
 
         @guest
