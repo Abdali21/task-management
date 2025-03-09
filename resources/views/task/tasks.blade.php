@@ -1,5 +1,5 @@
 <x-master title="Tasks">
-    <h2 class="text-2xl font-semibold my-4">My Tasks : </h2>
+    <h2 class="text-2xl font-semibold m-4">My Tasks : </h2>
     <div class="grid grid-cols-3">
         @foreach ($tasks as $task)
             <x-task-card :task="$task" />
